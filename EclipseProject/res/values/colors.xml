@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#FF03A9F4</color>
+    <color name="primary_dark">#FF0288D1</color>
+    <color name="status_bar_color">@color/primary_dark</color>
+    <color name="color_myui35theme">#f3b60c</color>
+ <!-- QingCheng os theme color -->
+    <color name="color_myui35theme_statusbar">#e8aa00</color>
+    <!-- <color name="color_myui35theme">#009688</color> -->
+    <!-- android os original color -->
+    <color name="color_list_item_checked">#e0e0e0</color>
+    <color name="color_divider_line">#1e000000</color>
+    <color name="font_title">#de000000</color>
+    <color name="font_subtitle">#8a000000</color>
+
+</resources>

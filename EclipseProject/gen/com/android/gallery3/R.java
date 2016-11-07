@@ -9,12 +9,28 @@ package com.android.gallery3;
 
 public final class R {
     public static final class anim {
-        public static final int from_left_in=0x7f050000;
-        public static final int from_left_out=0x7f050001;
-        public static final int from_right_in=0x7f050002;
-        public static final int from_right_out=0x7f050003;
+        public static final int from_left_in=0x7f040000;
+        public static final int from_left_out=0x7f040001;
+        public static final int from_right_in=0x7f040002;
+        public static final int from_right_out=0x7f040003;
     }
     public static final class attr {
+    }
+    public static final class color {
+        public static final int color_divider_line=0x7f050006;
+        /**  <color name="color_myui35theme">#009688</color> 
+ android os original color 
+         */
+        public static final int color_list_item_checked=0x7f050005;
+        public static final int color_myui35theme=0x7f050003;
+        /**  QingCheng os theme color 
+         */
+        public static final int color_myui35theme_statusbar=0x7f050004;
+        public static final int font_subtitle=0x7f050008;
+        public static final int font_title=0x7f050007;
+        public static final int primary=0x7f050000;
+        public static final int primary_dark=0x7f050001;
+        public static final int status_bar_color=0x7f050002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -31,16 +47,17 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0000;
+        public static final int action_settings=0x7f0a0003;
+        public static final int imageView=0x7f0a0001;
+        public static final int lin=0x7f0a0000;
+        public static final int textView=0x7f0a0002;
     }
     public static final class layout {
-        public static final int activity_gallery=0x7f040000;
+        public static final int activity_gallery=0x7f030000;
+        public static final int item_bottom_navigation=0x7f030001;
     }
     public static final class menu {
         public static final int gallery=0x7f090000;
-    }
-    public static final class mipmap {
-        public static final int ic_launcher=0x7f030000;
     }
     public static final class string {
         public static final int action_settings=0x7f070002;
@@ -74,5 +91,18 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
+        public static final int myActionBar=0x7f080003;
+        /**  <item name="android:background">@drawable/tabbar_background</item> 
+ <item name="android:background">@drawable/tabbar_selector</item> 
+ <item name="android:background">@android:attr/selectableItemBackground</item> 
+         */
+        public static final int myActionBarTabStyle=0x7f080007;
+        public static final int myActionBarTitleText=0x7f080006;
+        public static final int myStyle=0x7f080002;
+        /**  <item name="android:background">@drawable/tabbar_background</item> 
+ <item name="android:background">@android:attr/selectableItemBackground</item> 
+         */
+        public static final int myTabBar=0x7f080004;
+        public static final int myTabBarTitleText=0x7f080005;
     }
 }

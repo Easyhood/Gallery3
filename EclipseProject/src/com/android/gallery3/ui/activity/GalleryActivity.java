@@ -4,11 +4,13 @@ import com.android.gallery3.R;
 import com.android.gallery3.R.id;
 import com.android.gallery3.R.layout;
 import com.android.gallery3.R.menu;
+import com.android.gallery3.utils.ImmersedStatusUtils;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class GalleryActivity extends BaseActivity {
 
@@ -16,6 +18,10 @@ public class GalleryActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_gallery);
+		
+		//使用沉浸式状态栏
+		View topView = findViewById(R.id.lin);
+		ImmersedStatusUtils.initAfterSetContentView(this,topView);
 	}
 
 	@Override
