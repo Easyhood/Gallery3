@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_gallery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.gallery3.ui.activity.GalleryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/primary_dark">
+        <TextView
+            android:id="@+id/tv_native"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/native_place"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="25dp"
+            android:paddingBottom="5dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/tv_shu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/tv_native"
+            android:textColor="@android:color/darker_gray"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_locations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_toRightOf="@id/tv_shu"
+            android:textSize="15dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp"
+            android:text="@string/locations"
+            android:layout_alignParentBottom="true" />
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:paddingRight="15dp"
+            />
+
+    </RelativeLayout>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true">
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             />
+    </RadioGroup>
+</RelativeLayout>
