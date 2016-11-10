@@ -2,4 +2,5 @@
   <string name="app_name">图库</string>
   <string name="locations">地点</string>
   <string name="native_place">本地</string>
+  <string name="picture">照片</string>
 </resources>

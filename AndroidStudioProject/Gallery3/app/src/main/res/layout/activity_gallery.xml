@@ -1,66 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_gallery"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.android.gallery3.ui.activity.GalleryActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="52dp"
         android:background="@color/primary_dark">
-        <TextView
-            android:id="@+id/tv_native"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/native_place"
-            android:textColor="@android:color/white"
+
+        <RadioGroup
+            android:id="@+id/rg_title"
+            android:layout_width="170dp"
+            android:layout_height="47dp"
             android:layout_alignParentBottom="true"
-            android:paddingLeft="25dp"
-            android:paddingBottom="5dp"
-            android:textSize="15dp"/>
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_native"
+                style="@style/TitleTabStyle"
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                android:checked="true"
+                android:text="@string/native_place"
+                android:textColor="@color/txt_title_tab_selector"
+                android:textSize="17dp" />
+
+            <RadioButton
+                android:id="@+id/rb_location"
+                style="@style/TitleTabStyle"
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                android:text="@string/locations"
+                android:textColor="@color/txt_title_tab_selector"
+                android:textSize="17dp" />
+        </RadioGroup>
+
         <TextView
             android:id="@+id/tv_shu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="|"
             android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@id/tv_native"
+            android:background="@android:color/transparent"
+            android:paddingBottom="11dp"
+            android:paddingLeft="83dp"
+            android:text="|"
             android:textColor="@android:color/darker_gray"
-            android:paddingLeft="20dp"
-            android:paddingBottom="5dp"
-            android:textSize="15dp"/>
+            android:textSize="23dp" />
 
-        <TextView
-            android:id="@+id/tv_locations"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_toRightOf="@id/tv_shu"
-            android:textSize="15dp"
-            android:paddingLeft="20dp"
-            android:paddingBottom="5dp"
-            android:text="@string/locations"
-            android:layout_alignParentBottom="true" />
+
         <ImageView
             android:id="@+id/iv_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_camera"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
             android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:src="@android:drawable/ic_menu_camera" />
+    </RelativeLayout>
+
+
+      <FrameLayout
+          android:id="@+id/fl_content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1">
+
+      </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/holo_green_dark"
+            android:layout_alignParentTop="true"
             />
 
+        <RadioGroup
+            android:id="@+id/rg_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <RadioButton
+                android:id="@+id/rb_bottom_local"
+                style="@style/BottomTabStyle"
+                android:drawableTop="@drawable/tab_local_selector"
+                android:text="@string/native_place"
+                android:paddingRight="35dp"
+                android:textSize="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_bottom_pic"
+                style="@style/BottomTabStyle"
+                android:drawableTop="@drawable/tab_pic_selector"
+                android:text="@string/picture"
+                android:paddingLeft="35dp"
+                android:textSize="12dp"/>
+        </RadioGroup>
     </RelativeLayout>
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_alignParentBottom="true">
-         <RadioButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             />
-    </RadioGroup>
-</RelativeLayout>
+
+</LinearLayout>
