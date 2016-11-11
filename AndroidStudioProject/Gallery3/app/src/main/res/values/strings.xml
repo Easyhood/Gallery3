@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Gallery</string>
+    <string name="camera_label">camera</string>
     <string name="locations">locations</string>
     <string name="native_place">native</string>
     <string name="picture">picture</string>
+    <string name="time_lapse">TimeLapse</string>
 </resources>

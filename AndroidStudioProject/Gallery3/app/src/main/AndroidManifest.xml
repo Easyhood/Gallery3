@@ -15,6 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- This activity acts as a trampoline to the new Camera activity
+             in com.android.camera2 package, so that existing shortcuts
+             are preserved. -->
+        <activity android:name="com.android.camera.CameraActivitys"
+            android:icon="@mipmap/ic_launcher_camera"
+            android:label="@string/camera_label"
+            android:taskAffinity="com.android.camera.CameraActivitys"
+            android:theme="@style/android:Theme.NoDisplay" />
     </application>
 
 </manifest>

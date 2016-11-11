@@ -37,6 +37,7 @@
                 android:layout_height="50dp"
                 android:text="@string/locations"
                 android:textColor="@color/txt_title_tab_selector"
+                android:visibility="invisible"
                 android:textSize="17dp" />
         </RadioGroup>
 
@@ -50,6 +51,7 @@
             android:paddingLeft="83dp"
             android:text="|"
             android:textColor="@android:color/darker_gray"
+            android:visibility="invisible"
             android:textSize="23dp" />
 
 
@@ -80,7 +82,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/holo_green_dark"
+            android:background="@color/primary_dark"
             android:layout_alignParentTop="true"
             />
 
