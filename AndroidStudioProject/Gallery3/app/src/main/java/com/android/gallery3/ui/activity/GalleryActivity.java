@@ -33,6 +33,13 @@ public class GalleryActivity extends BaseActivity {
         setContentView(R.layout.activity_gallery);
         initView();
         initFragment();
+
+        //默认Fragment
+        NativeFragment fragment = new NativeFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fl_content,fragment);
+        transaction.commit();
     }
 
     /**
