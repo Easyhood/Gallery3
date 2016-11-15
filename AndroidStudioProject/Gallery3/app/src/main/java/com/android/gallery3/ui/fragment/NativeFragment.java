@@ -37,7 +37,7 @@ public class NativeFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_native, container, false);
         recyclerViewNative = (RecyclerView) view.findViewById(R.id.recyclerView_native);
         initData();
-        NativeAdapter nativeAdapter = new NativeAdapter(getActivity(), mDatas);
+        NativeAdapter nativeAdapter = new NativeAdapter(mActivity, mDatas);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerViewNative.setLayoutManager(layoutManager);
         recyclerViewNative.setAdapter(nativeAdapter);
@@ -45,8 +45,8 @@ public class NativeFragment extends BaseFragment {
 
 
     }
-
-    private void initData() {
+    @Override
+    public void initData() {
         mDatas = new ArrayList<String>();
         for ( int i=0; i < 40; i++) {
             mDatas.add( "item"+i);
