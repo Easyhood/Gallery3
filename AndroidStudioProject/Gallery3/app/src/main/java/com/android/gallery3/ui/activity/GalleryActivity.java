@@ -10,8 +10,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.android.gallery3.R;
+import com.android.gallery3.global.GlobalConstants;
 import com.android.gallery3.ui.fragment.NativeFragment;
 import com.android.gallery3.ui.fragment.PictureFragment;
+import com.android.gallery3.utils.EventUtil;
+
+import org.greenrobot.eventbus.EventBus;
 
 
 public class GalleryActivity extends BaseActivity {
@@ -22,7 +26,7 @@ public class GalleryActivity extends BaseActivity {
     private RadioGroup rgBottom;
     private RadioButton rbBottomLocal;
     private RadioButton rbBottomPic;
-    private RadioGroup rgTitle;
+    public RadioGroup rgTitle;
     private RadioButton rbNative;
     private RadioButton rbLocation;
     private TextView tvShu;
@@ -33,6 +37,7 @@ public class GalleryActivity extends BaseActivity {
         setContentView(R.layout.activity_gallery);
         initView();
         initFragment();
+        initPictureFragmentViewpager();
 
         //默认Fragment
         NativeFragment fragment = new NativeFragment();
@@ -105,6 +110,28 @@ public class GalleryActivity extends BaseActivity {
         });
         rgBottom.check(R.id.rb_bottom_local);
 
+    }
+
+    /**
+     * 初始化picturefragment的viewpager的切换事件
+     */
+    public void initPictureFragmentViewpager(){
+        rgTitle.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.rb_native:
+                        EventBus.getDefault().post(new EventUtil(GlobalConstants.TIME_MSG));
+                        break;
+                    case R.id.rb_location:
+                        EventBus.getDefault().post(new EventUtil(GlobalConstants.MAP_MSG));
+                        break;
+                    default:
+                        EventBus.getDefault().post(new EventUtil(GlobalConstants.TIME_MSG));
+                        break;
+                }
+            }
+        });
     }
 
 }

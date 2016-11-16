@@ -1,6 +1,8 @@
 package com.android.gallery3.ui.fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,6 +22,7 @@ public class NativeFragment extends BaseFragment {
 
     private List<String> mDatas;
     private RecyclerView recyclerViewNative;
+    public Activity mActivity;
 
     public NativeFragment() {
         // Required empty public constructor
@@ -30,6 +33,12 @@ public class NativeFragment extends BaseFragment {
         return fragment;
     }
 
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mActivity = getActivity();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,11 +54,12 @@ public class NativeFragment extends BaseFragment {
 
 
     }
+
     @Override
     public void initData() {
         mDatas = new ArrayList<String>();
-        for ( int i=0; i < 40; i++) {
-            mDatas.add( "item"+i);
+        for (int i = 0; i < 40; i++) {
+            mDatas.add("item" + i);
         }
     }
 }
