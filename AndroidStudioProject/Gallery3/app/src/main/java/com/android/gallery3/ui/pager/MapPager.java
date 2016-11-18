@@ -5,8 +5,10 @@ import android.view.View;
 
 import com.android.gallery3.R;
 
+import java.util.List;
+
 /**
- * Description:
+ * Description: 地图页面
  * Copyright  : Copyright (c) 2016
  * Company    : RGK
  * Author     : qi.guan
@@ -14,7 +16,7 @@ import com.android.gallery3.R;
  */
 
 public class MapPager extends BasePager {
-
+    private List<String> mDatas;
     public MapPager(Activity activity) {
         super(activity);
     }

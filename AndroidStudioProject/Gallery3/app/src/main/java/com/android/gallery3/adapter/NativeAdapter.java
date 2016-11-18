@@ -33,7 +33,7 @@ public class NativeAdapter extends RecyclerView.Adapter<NativeViewHolder> {
 
     @Override
     public NativeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.native_item, parent, false);
+        View view = inflater.inflate(R.layout.fragment_native_item, parent, false);
         NativeViewHolder holder = new NativeViewHolder(view);
         return holder;
     }

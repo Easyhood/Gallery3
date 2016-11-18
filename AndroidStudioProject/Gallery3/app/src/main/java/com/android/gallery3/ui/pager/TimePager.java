@@ -6,8 +6,11 @@ import android.view.View;
 
 import com.android.gallery3.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Description:
+ * Description: 时间流页面
  * Copyright  : Copyright (c) 2016
  * Company    : RGK
  * Author     : qi.guan
@@ -17,7 +20,7 @@ import com.android.gallery3.R;
 public class TimePager extends BasePager {
 
     private RecyclerView recyclerViewTime;
-
+    private List<String> mDatas;
     public TimePager(Activity activity) {
         super(activity);
     }
@@ -31,6 +34,9 @@ public class TimePager extends BasePager {
 
     @Override
     public void initData() {
-
+        mDatas = new ArrayList<String>();
+        for (int i = 0; i < 40; i++) {
+            mDatas.add("item" + i);
+        }
     }
 }

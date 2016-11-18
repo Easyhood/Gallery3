@@ -12,6 +12,7 @@ public class GlobalConstants {
     //图片地址
     public static final String PHOTO_URL = "/Pictures/";
 
+    //消息队列
     public static final int TIME_MSG = 0;
     public static final int MAP_MSG = 1;
 }
