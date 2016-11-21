@@ -1,10 +1,13 @@
 package com.android.gallery3.ui.pager;
 
 import android.app.Activity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.android.gallery3.R;
+import com.android.gallery3.adapter.TimeAdapter;
+import com.android.gallery3.utils.DividerGridItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +32,12 @@ public class TimePager extends BasePager {
     public View initView() {
         View view = View.inflate(mActivity, R.layout.pager_time, null);
         recyclerViewTime = (RecyclerView) view.findViewById(R.id.recyclerView_time);
+        initData();
+        TimeAdapter timeAdapter = new TimeAdapter(mActivity, mDatas);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(mActivity, 4);
+        recyclerViewTime.setAdapter(timeAdapter);
+        recyclerViewTime.setLayoutManager(gridLayoutManager);
+        recyclerViewTime.addItemDecoration(new DividerGridItemDecoration(mActivity));
         return view;
     }
 
@@ -36,7 +45,7 @@ public class TimePager extends BasePager {
     public void initData() {
         mDatas = new ArrayList<String>();
         for (int i = 0; i < 40; i++) {
-            mDatas.add("item" + i);
+            mDatas.add(i + "月");
         }
     }
 }

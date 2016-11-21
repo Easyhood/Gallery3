@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.android.gallery3.adapter.NativeAdapter;
 import com.android.gallery3.R;
+import com.android.gallery3.utils.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,9 +48,10 @@ public class NativeFragment extends BaseFragment {
         recyclerViewNative = (RecyclerView) view.findViewById(R.id.recyclerView_native);
         initData();
         NativeAdapter nativeAdapter = new NativeAdapter(mActivity, mDatas);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(mActivity);
         recyclerViewNative.setLayoutManager(layoutManager);
         recyclerViewNative.setAdapter(nativeAdapter);
+        recyclerViewNative.addItemDecoration(new DividerItemDecoration(mActivity,DividerItemDecoration.VERTICAL_LIST));
         return view;
 
 
